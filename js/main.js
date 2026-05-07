@@ -132,14 +132,25 @@
       btn.textContent = 'Sending…';
     }
 
-    // Simulate async submission (replace with real endpoint as needed)
-    setTimeout(function () {
-      form.style.display = 'none';
-      const successMsg = document.getElementById('formSuccess');
-      if (successMsg) {
-        successMsg.classList.add('visible');
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        form.style.display = 'none';
+        const successMsg = document.getElementById('formSuccess');
+        if (successMsg) successMsg.classList.add('visible');
+      } else {
+        if (btn) { btn.disabled = false; btn.textContent = 'Submit My Free Quote Request'; }
+        alert('Something went wrong. Please call us directly at (208) 948-9003.');
       }
-    }, 1200);
+    }).catch(function () {
+      if (btn) { btn.disabled = false; btn.textContent = 'Submit My Free Quote Request'; }
+      alert('Something went wrong. Please call us directly at (208) 948-9003.');
+    });
   }
 
   /* ── Scroll-reveal animations ───────────────────────────── */
