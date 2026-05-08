@@ -285,6 +285,12 @@ p  { color: var(--gray); }
   background: linear-gradient(rgba(15, 40, 18, 0.72), rgba(15, 40, 18, 0.65)),
               url('../images/hero-home.jpg') center center / cover no-repeat;
 }
+
+/* Services hero uses real photo */
+.hero-services {
+  background: linear-gradient(rgba(15, 40, 18, 0.72), rgba(15, 40, 18, 0.65)),
+              url('../images/hero-services.jpg') center center / cover no-repeat;
+}
 .hero::before {
   content: '';
   position: absolute;
