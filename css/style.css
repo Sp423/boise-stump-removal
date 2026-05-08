@@ -303,6 +303,12 @@ p  { color: var(--gray); }
   background: linear-gradient(rgba(15, 40, 18, 0.72), rgba(15, 40, 18, 0.65)),
               url('../images/hero-service-area.jpg') center center / cover no-repeat;
 }
+
+/* Contact hero uses real photo */
+.hero-contact {
+  background: linear-gradient(rgba(15, 40, 18, 0.72), rgba(15, 40, 18, 0.65)),
+              url('../images/hero-contact.jpg') center center / cover no-repeat;
+}
 .hero::before {
   content: '';
   position: absolute;
