@@ -1261,6 +1261,7 @@ p  { color: var(--gray); }
 .blog-card-link:hover { color: var(--primary-dark); }
 
 @media (max-width: 768px) {
-  .blog-layout { grid-template-columns: 1fr; }
-  .blog-sidebar { position: static; }
+  .blog-layout { grid-template-columns: 1fr; gap: 0; }
+  .blog-sidebar { position: static; margin-top: 56px; }
+  .blog-cta-box { margin-top: 40px; }
 }
